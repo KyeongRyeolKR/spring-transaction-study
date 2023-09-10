@@ -33,6 +33,7 @@ public class MemberService {
     /**
      * 로그 저장이 실패해도 회원가입이 가능하도록 로그 저장 예외를 잡음
      */
+    @Transactional
     public void joinV2(String username) {
         Member member = new Member(username);
         Log logMessage = new Log(username);
